@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Routes, Route, } from "react-router-dom";
 import Navs from "./components/Navbar";
 import Home from "./pages/Home";
 import Announcement from "./pages/Announcements";
@@ -10,38 +10,20 @@ import Claim from "./pages/Claims";
 import Quickl from "./pages/QuickLink";
 
 function App() {
+
   return (
     <div className="">
-      <Router>
-        <div>
+      <Navs />
 
-          <Navs />
-
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/announcements">
-              <Announcement />
-            </Route>
-            <Route path="/service">
-              <Services />
-            </Route>
-            <Route path="/benefits">
-              <Benefit />
-            </Route>
-            <Route path="/hospital">
-              <Hospitals />
-            </Route>
-            <Route path="/claim">
-              <Claim />
-            </Route>
-            <Route path="/quicklink">
-              <Quickl />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="announcements" element={<Announcement />} />
+        <Route path="service" element={<Services />} />
+        <Route path="benefits" element={<Benefit />} />
+        <Route path="hospital" element={<Hospitals />} />
+        <Route path="claim" element={<Claim />} />
+        <Route path="quicklink" element={<Quickl />} />
+      </Routes>
     </div>
   );
 }

@@ -1,66 +1,71 @@
-import React from "react";
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const SideMenu = () => {
+  const location = useLocation(); // once ready it returns the 'window.location' object
+  const [url, setUrl] = useState(null);
+  useEffect(() => {
+    setUrl(location.pathname);
+  }, [location]);
   return (
     <div className="sidemenu">
       <h2>Menu</h2>
       <ul>
         <li>
-          <NavLink 
+          <Link
             to="/"
-            activeClassName="active"
+            className={url === "/" ? " active" : ""}
           >
             Home
-          </NavLink >
+          </Link>
         </li>
         <li>
-          <NavLink 
+          <Link
             to="/announcements"
-            activeClassName="active"
+            className={url === "/announcements" ? " active" : ""}
           >
             Announcements
-          </NavLink >
+          </Link>
         </li>
         <li>
-          <NavLink 
+          <Link
             to="/service"
-            activeClassName="active"
+            className={url === "/service" ? " active" : ""}
           >
             Pacific Prime – Cigna Support Team & Services
-          </NavLink >
+          </Link>
         </li>
         <li>
-          <NavLink 
+          <Link
             to="/benefits"
-            activeClassName="active"
+            className={url === "/benefits" ? " active" : ""}
           >
             Table of Benefits
-          </NavLink >
+          </Link>
         </li>
         <li>
-          <NavLink 
+          <Link
             to="/hospital"
-            activeClassName="active"
+            className={url === "/hospital" ? " active" : ""}
           >
             Hospitals List & Facilities
-          </NavLink >
+          </Link>
         </li>
         <li>
-          <NavLink 
+          <Link
             to="/claim"
-            activeClassName="active"
+            className={url === "/claim" ? " active" : ""}
           >
             Claims Procedures
-          </NavLink >
+          </Link>
         </li>
         <li>
-          <NavLink 
+          <Link
             to="/quicklink"
-            activeClassName="active"
+            className={url === "/quicklink" ? " active" : ""}
           >
             Quick links
-          </NavLink>
+          </Link>
         </li>
       </ul>
     </div>
