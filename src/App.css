@@ -1,5 +1,37 @@
 body {
   box-sizing: border-box;
+  background: #f6f6f6;
+}
+
+nav {
+  background: #f6f6f6;
+}
+
+footer {
+  background-color: #28c;
+  margin-top: 40px;
+  padding: 50px;
+}
+
+.footer-detail {
+  display: flex;
+  align-items: center;
+}
+
+.footer-detail > span {
+  text-align: right;
+  color: #fff;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.logo-footer {
+  width: 300px;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 .navbar-brand > img {
@@ -58,5 +90,148 @@ body {
 }
 
 .sidemenu > ul > li > a:hover {
-  background-color: #0066BB;
+  background-color: #0066bb;
+}
+
+.active {
+  background-color: #0066bb;
+}
+
+.card {
+  background-color: #eee;
+  background-clip: border-box;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 30px;
+}
+
+.card-header {
+  padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+  margin-bottom: 0;
+  color: #000;
+  background-color: #fff;
+  border-bottom: none;
+}
+
+.card-header:first-child {
+  border-radius: 0px;
+}
+
+.card-header > a {
+  color: #246;
+  font-size: 20px;
+}
+
+.card-header > a:hover {
+  color: #000;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 0;
+  color: var(--bs-card-color);
+}
+
+.img-card-body {
+  width: 100%;
+  height: auto;
+}
+
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 150px;
+}
+
+.card-detail > span {
+  margin: 15px 20px;
+  color: #000;
+  font-size: 16px;
+}
+
+.card-detail > a {
+  position: absolute;
+  bottom: 5px;
+  left: 35px;
+  background-color: #28c;
+  border: 1px solid #28c;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  padding: 0 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.card-detail > a:hover {
+  background-color: #fff;
+  color: #28c;
+}
+
+.announce-detail {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.announce-detail > h6 {
+  color: #28c;
+  font-weight: bold;
+}
+
+.table-product {
+  margin-top: 15px;
+}
+
+.border-headtable {
+  border-bottom: 2px solid #28c;
+}
+
+td {
+  max-width: 280px;
+  border-bottom: 1px solid #000;
+  padding: 10px 0px;
+}
+
+.img-table {
+  width: 50px;
+  height: auto;
+}
+
+.service-detail {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 30px 20px;
+}
+
+.service-detail > h3 {
+  color: #333;
+}
+
+.service-detail > h4 {
+  color: #246;
+}
+
+@media screen and (max-width: 450px) {
+  .logo-footer {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-detail {
+    margin-top: 15px;
+  }
+
+  .footer-detail > span {
+    text-align: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 25px;
+  }
 }

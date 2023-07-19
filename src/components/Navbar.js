@@ -3,7 +3,7 @@ import { Navbar, Container  } from "react-bootstrap";
 
 const Navs = () => {
   return (
-    <Navbar bg="white" expand="lg">
+    <Navbar expand="lg">
       <Container>
         <Navbar.Brand href="/"><img src="/logo_sh.png" alt=""/></Navbar.Brand>
         <div className="right-logo">

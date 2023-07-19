@@ -1,6 +1,7 @@
 import "./App.css";
-import { Routes, Route, } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navs from "./components/Navbar";
+import Footers from "./components/Footer";
 import Home from "./pages/Home";
 import Announcement from "./pages/Announcements";
 import Services from "./pages/Service";
@@ -10,7 +11,6 @@ import Claim from "./pages/Claims";
 import Quickl from "./pages/QuickLink";
 
 function App() {
-
   return (
     <div className="">
       <Navs />
@@ -24,6 +24,8 @@ function App() {
         <Route path="claim" element={<Claim />} />
         <Route path="quicklink" element={<Quickl />} />
       </Routes>
+
+      <Footers />
     </div>
   );
 }
